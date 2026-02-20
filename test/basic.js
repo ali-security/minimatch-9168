@@ -60,8 +60,11 @@ t.test('basic tests', function (t) {
       t.same(
         actual,
         expect,
-        JSON.stringify(pattern) + ' ' + JSON.stringify(expect),
-        tapOpts
+        JSON.stringify(pattern) +
+          ' ' +
+          JSON.stringify(expect) +
+          (options ? ' ' + JSON.stringify(options) : ''),
+        tapOpts,
       )
     } else {
       // optimization level 0 just doesn't match a lot of stuff
